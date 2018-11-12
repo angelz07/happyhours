@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="happyhours.Vues.CartePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="Blue" IsRunning="true"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

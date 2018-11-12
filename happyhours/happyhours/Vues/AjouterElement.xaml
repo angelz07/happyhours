@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="happyhours.Vues.AjouterElement">
+    
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" >
+            
+            <Grid RowSpacing="10" ColumnSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <!--   <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/> -->
+                </Grid.ColumnDefinitions>
+                
+
+                <StackLayout Orientation="Horizontal"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Ajouter une Promotion" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="BlueViolet" />
+                    <Label Text="(* = Obligatiore)" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Micro" TextColor="BlueViolet" />
+                </StackLayout>
+                
+
+                <Label Grid.Row="1" Grid.Column="0"  Text="Etablissement:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="NomXAML" TextChanged="NomXAML_TextChanged"  Text="" HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="2" Grid.Column="0"  Text="Type:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Picker Grid.Row="2" Grid.Column="1" SelectedIndexChanged="TypeXAML_SelectedIndexChanged"    x:Name="TypeXAML" Title="Type" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A"   >
+                    <Picker.Items>
+                        <x:String>Bierre</x:String>
+                        <x:String>Cocktail</x:String>
+                        <x:String>Alcool</x:String>
+                        <x:String>Divers</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedIndex>
+                        1
+                    </Picker.SelectedIndex>
+                </Picker>
+
+
+                <Button x:Name="MyPositionBoutton" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="MyPositionBoutton_Clicked"  Text="Ma Position"  FontAttributes="Bold" FontSize="Micro" TextColor="DarkSlateBlue"/>
+
+
+                <Label Grid.Row="4" Grid.Column="0"  Text="Rue:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC"/>
+                <Entry x:Name="RueXAML" Grid.Row="4" Grid.Column="1"  Text="" TextChanged="RueXAML_TextChanged"   HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="5" Grid.Column="0"  Text="Numéro:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry x:Name="NumeroXAML" Grid.Row="5" Grid.Column="1"  Text="" TextChanged="NumeroXAML_TextChanged"     HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="6" Grid.Column="0"  Text="Code Postal:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry x:Name="CodePostalXAML" Grid.Row="6" Grid.Column="1"  Text="" TextChanged="CodePostalXAML_TextChanged"     HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="7" Grid.Column="0"  Text="Ville:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry x:Name="VilleXAML" Grid.Row="7" Grid.Column="1"  Text="" TextChanged="VilleXAML_TextChanged"   HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                
+                <Label Grid.Row="8" Grid.Column="0"  Text="Pays:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry Grid.Row="8" Grid.Column="1" x:Name="PaysXAML" TextChanged="PaysXAML_TextChanged"     FontAttributes="Bold" FontSize="Micro" TextColor="#35813A"   ></Entry>
+
+                <Label Grid.Row="9" Grid.Column="0"  Text="Site Internet:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry Grid.Row="9" Grid.Column="1"  x:Name="UrlXAML" Text="" TextChanged="UrlXAML_TextChanged"   HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A"/>
+
+                <StackLayout Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Label />
+                    <BoxView HeightRequest="1" BackgroundColor="Green" HorizontalOptions="FillAndExpand" />
+                    <Label />
+                </StackLayout>
+
+                <Label Grid.Row="11" Grid.Column="0"  Text="Promotion:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry Grid.Row="11" Grid.Column="1" x:Name="PromoXAML" Text="" TextChanged="PromoXAML_TextChanged"   HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="12" Grid.Column="0"  Text="Heure du Début:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <TimePicker Grid.Row="12" Grid.Column="1" x:Name="HeureDebutXAML" PropertyChanged="HeureDebutXAML_PropertyChanged"    IsVisible="true"  Format = "HH:mm" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                <Label Grid.Row="13" Grid.Column="0"  Text="Heure de Fin:*" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <TimePicker Grid.Row="13" Grid.Column="1" x:Name="HeureFinXAML" PropertyChanged="HeureFinXAML_PropertyChanged"    IsVisible="true"   Format = "HH:mm" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A"  />
+
+                <Label Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" Text="Jour(s):*" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+
+                <Grid Grid.Row="15" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" RowSpacing="10" ColumnSpacing="5" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <!--   <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/> -->
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" >
+                        <Label  Text="Lundi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="LundiXAML" Toggled="LundiXAML_Toggled"  IsVisible="True" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                        <Label  Text="Mardi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="MardiXAML" Toggled="MardiXAML_Toggled"   IsVisible="True" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" >
+                        <Label  Text="Mercredi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="MercrediXAML" Toggled="MercrediXAML_Toggled"     IsVisible="True" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" >
+                        <Label  Text="Jeudi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="JeudiXAML" Toggled="JeudiXAML_Toggled"   IsVisible="True" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" >
+                        <Label  Text="Vendredi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="VendrediXAML" Toggled="VendrediXAML_Toggled"     IsVisible="True" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" >
+                        <Label  Text="Samedi:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  x:Name="SamediXAML" Toggled="SamediXAML_Toggled"     IsVisible="True" />
+                    </StackLayout>
+
+                    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" RowSpacing="10" ColumnSpacing="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label  Grid.Row="0" Grid.Column="0" Text="Dimanche:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                        <Switch  Grid.Row="0" Grid.Column="1" x:Name="DimancheXAML" Toggled="DimancheXAML_Toggled"    IsVisible="True" HorizontalOptions="Start"/>
+                    </Grid>
+                </Grid>
+
+                <Label Grid.Row="17" Grid.Column="0"  Text="Autre:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                <Entry Grid.Row="17" Grid.Column="1" x:Name="AutreJourXAML" Text="" TextChanged="AutreJourXAML_TextChanged"   HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+
+
+                <Grid Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="2" RowSpacing="10" ColumnSpacing="5" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Longitude:*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="LongitudeXAML" Text="" HorizontalTextAlignment="Start"   FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Latitude:*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Micro" TextColor="#4D6CCC" />
+                    <Entry Grid.Row="1" Grid.Column="1" x:Name="LatitudeXAML" Text="" HorizontalTextAlignment="Start"   FontAttributes="Bold" FontSize="Micro" TextColor="#35813A" />
+                </Grid>
+
+               
+           
+
+
+                <Button  x:Name="EnvoyerBoutton" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Text="Envoyer" Clicked="EnvoyerBoutton_Clicked"  FontAttributes="Bold" FontSize="Micro" TextColor="DarkSlateBlue"/>
+
+                <Label  Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="2" />
+
+
+             
+            </Grid>
+            
+
+
+           
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="happyhours.Vues.ListAddress">
+    
+        <StackLayout  x:Name="StackBase" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20" IsVisible="True" >
+            <StackLayout  x:Name="StackListAddressXAML" IsVisible="False" Opacity="0.8" Spacing="10">
+            <Label  Text="Veuillez selectionner la bonne adresse." HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="MediumSeaGreen" />
+            <ListView x:Name="ListAddXAML" SeparatorColor="Black" BackgroundColor="Azure"  HasUnevenRows="True"   ItemsSource="{Binding .}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                
+                                <StackLayout  Orientation="Vertical" IsClippedToBounds="True" >
+                                    <Label Text="{Binding Longitude}"  FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" IsVisible="False"/>
+                                    <Label Text="{Binding Latitude}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" IsVisible="False"/>
+                                    <Label Text="{Binding Id}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" IsVisible="False"/>
+
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label  Text="{Binding Rue}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" Margin="10,0,0,0"/>
+                                        <Label  Text="{Binding Numero}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" Margin="10,0,0,0"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding CodePostal}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" Margin="10,0,0,0"/>
+                                        <Label Text="{Binding Ville}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" Margin="10,0,0,0"/>
+                                        <Label Text="{Binding Pays}" FontAttributes="Bold" FontSize="Medium" TextColor="#4D6CCC" LineBreakMode="NoWrap" Margin="10,0,0,0"/>
+                                    </StackLayout>
+
+                                    <BoxView Color="Navy" HeightRequest="2" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                </StackLayout>
+                                
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+
+
+                
+
+                </ListView>
+            <Button Text="Close" TextColor="#4D6CCC" Clicked="OnClose" BackgroundColor="Coral" ></Button>
+            </StackLayout>
+            <StackLayout  x:Name="WaitingXAML" IsVisible="False" Opacity="0.8"  >
+                <Label Text="Un moment s'il vous plait, cela peux prendre un peu de temps, cela dépend de votre connexion internet :-) !"></Label>
+                <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="70" WidthRequest="70"  Color="Green"  IsRunning="true" IsEnabled="True"></ActivityIndicator>
+
+            </StackLayout>
+
+        </StackLayout>
+   
+</ContentPage>

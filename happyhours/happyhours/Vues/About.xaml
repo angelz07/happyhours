@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:happyhours.Class"
+             x:Class="happyhours.Vues.About">
+   
+            
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Padding="10" Margin="10">
+                <Label Margin="20" Text="Happy Hours" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" TextColor="DarkSlateBlue" />
+
+                <Label Margin="10" Text="Happy Hours est une application qui permet de vous échanger vos bons plans :-), donc n'hésite pas à ajouter les votre !!!!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Italic" FontSize="Medium" TextColor="#35813A" />
+                <Label Margin="10" Text="Vous avez l'onglet Carte pour voir ce qui se passe autour de vous, et surtout l'onglet ajouter pour partager vos bons plans !!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Italic" FontSize="Medium" TextColor="#35813A" />
+
+                <Label Margin="10" Text="Pour toutes informations ou retour de bug éventuel :" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Italic" FontSize="Medium" TextColor="#35813A" />
+
+
+
+                <Button x:Name="Support" Text="Support" FontAttributes="Italic" FontSize="Large" TextColor="DarkSlateBlue"  Clicked="Support_Clicked">
+                        
+                    </Button>
+              
+
+                <Label Margin="10" Text="Merci et bon amusement ! :-)" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Italic" FontSize="Medium" TextColor="#35813A" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

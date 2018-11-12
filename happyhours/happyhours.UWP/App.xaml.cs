@@ -53,6 +53,7 @@ namespace happyhours.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
+                Rg.Plugins.Popup.Popup.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

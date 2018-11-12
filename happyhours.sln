@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "happyhours.iOS", "happyhour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "happyhours.UWP", "happyhours\happyhours.UWP\happyhours.UWP.csproj", "{EF3654E7-BCF5-4241-B5EC-1B7E99DE55CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "happyhours", "happyhours\happyhours\happyhours.csproj", "{AB43749E-F93F-43BA-AAA6-7523EA57EF90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "happyhours", "happyhours\happyhours\happyhours.csproj", "{AB43749E-F93F-43BA-AAA6-7523EA57EF90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

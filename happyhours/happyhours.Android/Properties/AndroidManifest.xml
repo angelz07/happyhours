@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.happyhours">
-    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
-    <application android:label="happyhours.Android"></application>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="be.telecom4all.happyhours" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+	<application 
+    android:label="Happy Hours" 
+    android:icon="@drawable/logo"
+    android:allowBackup="true"
+    android:hardwareAccelerated="false"
+    android:largeHeap="true">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDoER8npcjFlhBVygmd2Ec9Sc6PNSjSg5Y" />
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
